@@ -131,7 +131,7 @@ async def main():
   browser = await launch(headless=False)
   page = await browser.newPage()
   await fucking.bypass_detections(page)
-  await page.goto("https://www.google.com/recaptcha/api2/demo")
+  await page.goto("https://www.google.co.uk/recaptcha/api2/demo")
   while True:
     await asyncio.sleep(1)
 
@@ -161,7 +161,7 @@ import cloudscraper
 scraper = cloudscraper.create_scraper(debug=True)
 scraper = cloudscraper.create_scraper(delay=1000)
 proxies = {"http": "http://localhost:8080", "https": "http://localhost:8080"}
-proxies = {"http": "http://google.com:8080","https": "https://google.com:8080"}
+proxies = {"http": "http://google.co.uk:8080","https": "https://google.co.uk:8080"}
 scraper = cloudscraper.create_scraper(
     browser={
         'browser': 'firefox',
@@ -304,7 +304,7 @@ class GoogleTestCase(unittest.TestCase):
         self.addCleanup(self.browser.quit)
 
     def testPageTitle(self):
-        self.browser.get('http://www.google.com')
+        self.browser.get('http://www.google.co.uk')
         self.assertIn('Google', self.browser.title)
 
                                                                                                                                                                                                                                                                                                                                                   
@@ -346,7 +346,7 @@ acceptall = [
 		"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1\r\n",
 		"Accept: text/plain;q=0.8,image/png,*/*;q=0.5\r\nAccept-Charset: iso-8859-1\r\n",]
 referers = [
-	"https://www.google.com/search?q=",
+	"https://www.google.co.uk/search?q=",
 	"https://check-host.net/",
 	"https://www.facebook.com/",
  	"https://www.youtube.com/",
